@@ -1,4 +1,4 @@
-/* gets a person first last nam and age */
+/* it gets a person first name, last name and age  */
 
 public class person {
     private String firstName;
