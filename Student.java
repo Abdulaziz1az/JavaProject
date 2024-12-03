@@ -37,6 +37,36 @@ public class Student {
    {
     return major;
    }
-   
+
+   // setter
+   public void setFirstName(String inFirstName)
+   // sets the first name
+   {
+    firstName = inFirstName;
+   }
+
+   public void setLastName(String inLastName)
+   // sets the last name
+   {
+    lastName = inLastName;
+   }
+
+   public void setStrId(String inStrId)
+   // sets the star id
+   {
+    stId = inStrId;
+   }
+
+   public void setYear(int inYear)
+   // sets the year
+   {
+    year = inYear;
+   }
+
+   public void setMajor(String inMajor)
+   // sets the major
+   {
+    major = inMajor;
+   }   
 
 }
