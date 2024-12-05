@@ -69,4 +69,27 @@ public class Student {
     major = inMajor;
    }   
 
+   // Constructors
+   private Student()
+   {
+
+   }
+   private Student(String inFirstName, String inLastName, String inStId, int inYear, String inMajor)
+   {
+    firstName = inFirstName;
+    lastName = inLastName;
+    stId = inStId;
+    year = inYear;
+    major = inMajor;
+   }
+
+   // ToString
+   public String toString()
+   {
+    String str;
+    str =  "First Name: " +firstName + " "+ "Last Name" + lastName + "\n" 
+    + "Student Id: " + stId + "Major: " + major + "Year: " + year;
+    return str;
+   }
+
 }
