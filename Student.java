@@ -1,38 +1,38 @@
 // gets student information
 public class Student {
     // class variables
-   private String firstName;
-   private String lastName;
-   private String stId; // star id
-   private int year;
-   private String major;
+   public String firstName;
+   public String lastName;
+   public String stId; // star id
+   public int year;
+   public String major;
 
    // gets and sets
-   private String getFirstName()
+   public String getFirstName()
    // returns the first name
    {
     return firstName;
    }
 
-   private String getLastName()
+   public String getLastName()
    // returns the last name
    {
     return lastName;
    }
 
-   private String getStId()
+   public String getStId()
    // returns the star id
    {
     return stId;
    }
 
-   private int getYear()
+   public int getYear()
    // returns the year 
    {
     return year;
    }
 
-   private String getMajor()
+   public String getMajor()
    // returns the major
    {
     return major;
@@ -70,11 +70,11 @@ public class Student {
    }   
 
    // Constructors
-   private Student()
+   public Student()
    {
 
    }
-   private Student(String inFirstName, String inLastName, String inStId, int inYear, String inMajor)
+   public Student(String inFirstName, String inLastName, String inStId, int inYear, String inMajor)
    {
     firstName = inFirstName;
     lastName = inLastName;
