@@ -87,8 +87,8 @@ public class Student {
    public String toString()
    {
     String str;
-    str =  "First Name: " +firstName + " "+ "Last Name" + lastName + "\n" 
-    + "Student Id: " + stId + "Major: " + major + "Year: " + year;
+    str =  "First Name: " + firstName + "\n "+ "Last Name: " + lastName + "\n" 
+    + "Student Id: "  + "\n " + stId + "\n "+ "Major: "  + major + "\n "+ "Year: " + year;
     return str;
    }
 
