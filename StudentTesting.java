@@ -16,17 +16,21 @@ public class StudentTesting {
         System.out.print("Enter your last name: ");
         Student1.setLastName(Scannedinfo.nextLine());
 
+        // aske the user for middle name initial
+        System.out.print("Enter your middle name intial: ");
+        Student1.setMiddleNameInitial(Scannedinfo.nextLine());
+
         // aske the user for star id
         System.out.print("Enter your star id: ");
         Student1.setStrId(Scannedinfo.nextLine());
+        
+        // aske the user for major
+        System.out.print("Enter your major: ");
+        Student1.setMajor(Scannedinfo.nextLine());
 
         // aske the user for year
         System.out.print("Enter what year your in: ");
         Student1.setYear(Scannedinfo.nextInt());
-
-        // aske the user for major
-        System.out.print("Enter your major: ");
-        Student1.setMajor(Scannedinfo.nextLine());
 
         // print the toString 
         System.out.println(Student1.toString());

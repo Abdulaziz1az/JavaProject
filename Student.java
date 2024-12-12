@@ -2,6 +2,7 @@
 public class Student {
     // class variables
    public String firstName;
+   public String middleNameInitial;
    public String lastName;
    public String stId; // star id
    public int year;
@@ -14,6 +15,11 @@ public class Student {
     return firstName;
    }
 
+   public String MiddleNameInitial()
+   // returns the middle name initial
+   {
+    return middleNameInitial;
+   }
    public String getLastName()
    // returns the last name
    {
@@ -45,6 +51,11 @@ public class Student {
     firstName = inFirstName;
    }
 
+   public void setMiddleNameInitial(String inMiddleInitial)
+   {
+    middleNameInitial = inMiddleInitial;
+   }
+
    public void setLastName(String inLastName)
    // sets the last name
    {
@@ -74,9 +85,10 @@ public class Student {
    {
 
    }
-   public Student(String inFirstName, String inLastName, String inStId, int inYear, String inMajor)
+   public Student(String inFirstName, String inMiddleInitial, String inLastName, String inStId, int inYear, String inMajor)
    {
     firstName = inFirstName;
+    middleNameInitial = inFirstName;
     lastName = inLastName;
     stId = inStId;
     year = inYear;
@@ -87,8 +99,9 @@ public class Student {
    public String toString()
    {
     String str;
-    str =  "First Name: " + firstName + "\n "+ "Last Name: " + lastName + "\n" 
-    + "Student Id: "  + "\n " + stId + "\n "+ "Major: "  + major + "\n "+ "Year: " + year;
+    str = "Full Name: " + firstName+" " + middleNameInitial+" " + lastName 
+    + "\n" + "star id: " + stId + "\n" + 
+    "Year: " + year + "\n" + "Major: " + major;
     return str;
    }
 
