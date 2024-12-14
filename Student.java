@@ -7,6 +7,7 @@ public class Student {
    public String stId; // star id
    public int year;
    public String major;
+   public double gpa;
 
    // gets and sets
    public String getFirstName()
@@ -42,6 +43,12 @@ public class Student {
    // returns the major
    {
     return major;
+   }
+
+   public double getGpa()
+   {
+    // returns the gpa
+    return gpa;
    }
 
    // setter
@@ -80,12 +87,27 @@ public class Student {
     major = inMajor;
    }   
 
+   public void setGpa(double inGpa)
+   {
+    // sets the gpa
+    gpa = inGpa;
+    if( gpa >= 3.5)
+    {
+        System.out.println("Congratulation and welcome to the university");
+    }
+    else
+    {
+        System.out.println("Sorry but you gpa is lower then the requirement");
+    }
+   }
+
    // Constructors
    public Student()
    {
 
    }
-   public Student(String inFirstName, String inMiddleInitial, String inLastName, String inStId, int inYear, String inMajor)
+   public Student(String inFirstName, String inMiddleInitial, String inLastName, 
+   String inStId, int inYear, String inMajor, double inGpa )
    {
     firstName = inFirstName;
     middleNameInitial = inFirstName;
@@ -93,6 +115,7 @@ public class Student {
     stId = inStId;
     year = inYear;
     major = inMajor;
+    gpa = inGpa;
    }
 
    // ToString
@@ -101,7 +124,7 @@ public class Student {
     String str;
     str = "Full Name: " + firstName+" " + middleNameInitial+" " + lastName 
     + "\n" + "star id: " + stId + "\n" + 
-    "Year: " + year + "\n" + "Major: " + major;
+    "Year: " + year + "\n" + "Major: " + major + "\n";
     return str;
    }
 
