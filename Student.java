@@ -5,6 +5,7 @@ public class Student {
    public String middleNameInitial;
    public String lastName;
    public String stId; // star id
+   public int age;
    public int year;
    public String major;
    public double gpa;
@@ -37,6 +38,12 @@ public class Student {
    // returns the year 
    {
     return year;
+   }
+
+   public int getAge()
+   // returns the age
+   {
+    return age;
    }
 
    public String getMajor()
@@ -81,6 +88,12 @@ public class Student {
     year = inYear;
    }
 
+   public void setAge(int inAge)
+   // sets the age
+   {
+    age = inAge;
+   }
+
    public void setMajor(String inMajor)
    // sets the major
    {
@@ -107,7 +120,7 @@ public class Student {
 
    }
    public Student(String inFirstName, String inMiddleInitial, String inLastName, 
-   String inStId, int inYear, String inMajor, double inGpa )
+   String inStId, int inYear, int inAge, String inMajor, double inGpa )
    {
     firstName = inFirstName;
     middleNameInitial = inFirstName;
@@ -116,13 +129,14 @@ public class Student {
     year = inYear;
     major = inMajor;
     gpa = inGpa;
+    age = inAge;
    }
 
    // ToString
    public String toString()
    {
     String str;
-    str = "Full Name: " + firstName+" " + middleNameInitial+" " + lastName 
+    str = "Full Name: " + firstName+" " + middleNameInitial+" " + lastName +"\n"+ "Age: "+ age 
     + "\n" + "star id: " + stId + "\n" + 
     "Year: " + year + "\n" + "Major: " + major + "\n";
     return str;

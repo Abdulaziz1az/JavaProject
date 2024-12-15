@@ -31,6 +31,10 @@ public class StudentTesting {
         // aske the user for year
         System.out.print("Enter what year your in: ");
         Student1.setYear(Scannedinfo.nextInt());
+
+          // aske the user for age
+          System.out.print("Enter your age: ");
+          Student1.setAge(Scannedinfo.nextInt());
          // aske the user for gpa
          System.out.print("Enter your Gpa: ");
          Student1.setGpa(Scannedinfo.nextDouble());
