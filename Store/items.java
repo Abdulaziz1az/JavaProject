@@ -29,11 +29,15 @@ public class items {
         this.itemName = inIteamName;
     } 
 
-    public void setPrice(int inPrice)
+    public void setPrice(int inPrice, int total)
     // sets the price
     {
         this.price = inPrice;
         // Conditional statement for the price
+        total = 0;
+        for (int i = 0; i < price; i++)
+            total+= i;
+            total = price;
         if (itemName == "Rice" )
         {
             price = 5;
@@ -42,12 +46,38 @@ public class items {
         {
             price = 4;
         }
+        else if (itemName == "Tomato")
+            price = 2;
+        else if(itemName == "Soup")
+            price = 3;
     }
 
     public void setQuantity(int inQuantity)
     // sets the quantity
     {
         this.quantity = inQuantity;
+        quantity = price *inQuantity;
+    }
+
+    // Constructors
+    public items()
+    {
+
+    }
+
+    public items(String inIteamName, int inPrice, int inQuantity)
+    {
+        this.itemName = inIteamName;
+        this.price = inPrice;
+        this.quantity = inQuantity;
+    }
+
+    // toString
+    public String toString()
+    {
+        String str;
+        str = "Your total is " + price + "\n" + "for these iteam" ;
+        return str;
     }
 
     
