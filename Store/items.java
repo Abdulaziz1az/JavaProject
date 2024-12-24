@@ -29,7 +29,7 @@ public class items {
         this.itemName = inIteamName;
     } 
 
-    public void setPrice(int inPrice)
+    public void setPrice(double inPrice)
     // sets the price
     {
         this.price = inPrice;
