@@ -33,7 +33,13 @@ public class items {
     // sets the price
     {
         this.price = inPrice;
-         if(this.itemName != null)
+        setPriceBasedOnItemName();
+    }
+
+    public void setPriceBasedOnItemName()
+    // sets the price on the listed items
+    {
+        if(this.itemName != null)
          {
             if(this.itemName.equals("Rice"))
                 this.price = 5.4;
@@ -43,12 +49,8 @@ public class items {
                 this.price = 3.2;
             else if(this.itemName.equals("Soup"))
                 this.price = 5.2;
-                //testing
-                //
-
          }
     }
-
     public void setQuantity(int inQuantity)
     // sets the quantity
     {
@@ -58,12 +60,14 @@ public class items {
     // Constructors
     public items()
     {
-
+        this.itemName = "";
+        this.price = 0.0;
+        this.quantity = 0;
     }
 
-    public items(String inIteamName, int inPrice, int inQuantity)
+    public items(String inItemName, double inPrice, int inQuantity)
     {
-        this.itemName = inIteamName;
+        this.itemName = inItemName;
         this.price = inPrice;
         this.quantity = inQuantity;
     }
@@ -78,7 +82,7 @@ public class items {
 public String toString()
 {
     String str;
-    str = itemName + " " + price;
+    str = "Item: " +itemName + ", price: " + price + ", Quantity: " + quantity;
     return str;
 }
 
