@@ -23,10 +23,10 @@ public class items {
         return quantity;
     }
 
-    public void setItemName(String inIteamName)
+    public void setItemName(String inItemName)
     // sets the item name
     {
-        this.itemName = inIteamName;
+        this.itemName = inItemName;
     } 
 
     public void setPrice(double inPrice)
@@ -41,6 +41,7 @@ public class items {
     {
         if(this.itemName != null)
          {
+            String itemNameLower = this.itemName.toLowerCase();
             if(this.itemName.equals("Rice"))
                 this.price = 5.4;
             else if(this.itemName.equals("Apple"))
@@ -49,6 +50,8 @@ public class items {
                 this.price = 3.2;
             else if(this.itemName.equals("Soup"))
                 this.price = 5.2;
+            else
+                this.price = 0.0;
          }
     }
     public void setQuantity(int inQuantity)
@@ -73,7 +76,7 @@ public class items {
     }
 
     //  method to cacluate the total price
-    public double cacluateTotatlPrice()
+    public double calculateTotalPrice()
     {
         return price * quantity;
     }
@@ -81,9 +84,7 @@ public class items {
 // toString
 public String toString()
 {
-    String str;
-    str = "Item: " +itemName + ", price: " + price + ", Quantity: " + quantity;
-    return str;
+    return  "Item: " +itemName + ", price: " + price + ", Quantity: " + quantity;
 }
 
     
