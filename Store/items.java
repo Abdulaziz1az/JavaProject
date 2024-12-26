@@ -27,13 +27,13 @@ public class items {
     // sets the item name
     {
         this.itemName = inItemName;
+        setPriceBasedOnItemName();
     } 
 
     public void setPrice(double inPrice)
     // sets the price
     {
         this.price = inPrice;
-        setPriceBasedOnItemName();
     }
 
     public void setPriceBasedOnItemName()
@@ -42,13 +42,13 @@ public class items {
         if(this.itemName != null)
          {
             String itemNameLower = this.itemName.toLowerCase();
-            if(this.itemName.equals("Rice"))
+            if(this.itemName.equalsIgnoreCase("Rice"))
                 this.price = 5.4;
-            else if(this.itemName.equals("Apple"))
+            else if(this.itemName.equalsIgnoreCase("Apple"))
                 this.price = 4.5;
-            else if(this.itemName.equals("Tomato"))
+            else if(this.itemName.equalsIgnoreCase("Tomato"))
                 this.price = 3.2;
-            else if(this.itemName.equals("Soup"))
+            else if(this.itemName.equalsIgnoreCase("Soup"))
                 this.price = 5.2;
             else
                 this.price = 0.0;
