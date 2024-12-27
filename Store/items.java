@@ -3,6 +3,7 @@ public class items {
     public String itemName; // the name of the item
     public double price; 
     public int quantity;
+    public double pound;
 
     // gets and sets
     public String getName()
@@ -21,6 +22,12 @@ public class items {
     // retutns the quantity
     {
         return quantity;
+    }
+
+    public double pound()
+    // retuns pound
+    {
+        return pound;
     }
 
     public void setItemName(String inItemName)
@@ -43,13 +50,53 @@ public class items {
          {
             String itemNameLower = this.itemName.toLowerCase();
             if(this.itemName.equalsIgnoreCase("Rice"))
-                this.price = 5.4;
+            {
+                if(this.pound <= 5.0)
+                {
+                    this.price = 3;
+                }
+                else if( this.pound > 5.0)
+                {
+                    this.price = 4;
+                }
+            }
+            
             else if(this.itemName.equalsIgnoreCase("Apple"))
-                this.price = 4.5;
+            if(this.pound <= 5.0)
+            {
+                this.price = 6;
+            }
+            else if( this.pound > 5.0)
+            {
+                this.price = 8;
+            }
             else if(this.itemName.equalsIgnoreCase("Tomato"))
-                this.price = 3.2;
+            if(this.pound <= 5.0)
+            {
+                this.price = 8;
+            }
+            else if( this.pound > 5.0)
+            {
+                this.price = 10;
+            }
             else if(this.itemName.equalsIgnoreCase("Soup"))
-                this.price = 5.2;
+            if(this.pound <= 5.0)
+                {
+                    this.price = 9;
+                }
+                else if( this.pound > 5.0)
+                {
+                    this.price = 10;
+                }
+            else if(this.itemName.equalsIgnoreCase("Onion"))
+            if(this.pound <= 5.0)
+            {
+                this.price = 3;
+            }
+            else if( this.pound > 5.0)
+            {
+                this.price = 4;
+            }
             else
                 this.price = 0.0;
          }
@@ -60,6 +107,12 @@ public class items {
         this.quantity = inQuantity;
     }
 
+    public void  setPound(int inPound)
+    // sets the pound
+    {
+        pound = inPound;
+    }
+
     // Constructors
     public items()
     {
@@ -68,11 +121,12 @@ public class items {
         this.quantity = 0;
     }
 
-    public items(String inItemName, double inPrice, int inQuantity)
+    public items(String inItemName, double inPrice, int inQuantity, double inPound)
     {
         this.itemName = inItemName;
         this.price = inPrice;
         this.quantity = inQuantity;
+        this.pound = inPound;
     }
 
     //  method to cacluate the total price
